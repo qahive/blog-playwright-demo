@@ -3,3 +3,4 @@ node_modules/
 /playwright-report/
 /playwright/.cache/
 resources/demo.y4m
+lighthouse/

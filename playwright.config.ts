@@ -49,6 +49,10 @@ const config: PlaywrightTestConfig = {
     ...devices['Desktop Chrome'],
     launchOptions: {
       args: [
+        // LIGHTHOUSE
+        '--remote-debugging-port=9222', 
+
+        // Video WEB CAM
         '--allow-file-access-from-files', // allows getUserMedia() to be called from file:// URLs
         '--use-fake-ui-for-media-stream', // flag avoids grant the camera
         '--use-fake-device-for-media-stream', // flag allow fake media stream
