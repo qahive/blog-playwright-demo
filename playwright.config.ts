@@ -43,27 +43,19 @@ const config: PlaywrightTestConfig = {
     trace: 'on-first-retry',
     
     headless: false,
-  },
 
-  /* Configure projects for major browsers */
-  projects: [
-    {
-      name: 'chrome',
-      use: {
-        permissions: ['camera'],
-        channel: 'chromium',
-        ...devices['Desktop Chrome'],
-        launchOptions: {
-          args: [
-            '--allow-file-access-from-files', // allows getUserMedia() to be called from file:// URLs
-            '--use-fake-ui-for-media-stream', // flag avoids grant the camera
-            '--use-fake-device-for-media-stream', // flag allow fake media stream
-            `--use-file-for-fake-video-capture=${path.join(__dirname, 'resources', 'demo.y4m')}`,
-          ],
-        },
-      },
+    permissions: ['camera'],
+    channel: 'chromium',
+    ...devices['Desktop Chrome'],
+    launchOptions: {
+      args: [
+        '--allow-file-access-from-files', // allows getUserMedia() to be called from file:// URLs
+        '--use-fake-ui-for-media-stream', // flag avoids grant the camera
+        '--use-fake-device-for-media-stream', // flag allow fake media stream
+        `--use-file-for-fake-video-capture=${path.join(__dirname, 'resources', 'demo.y4m')}`,
+      ],
     },
-  ],
+  },
 };
 
 export default config;
