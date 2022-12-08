@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/qahive/blog-playwright-demo#readme",
   "devDependencies": {
-    "@playwright/test": "^1.22.2",
+    "@applitools/eyes-playwright": "^1.13.0",
+    "@playwright/test": "^1.28.1",
     "lighthouse": "^9.6.2",
     "playwright-lighthouse": "^2.2.2"
   }
