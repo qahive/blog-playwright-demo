@@ -37,12 +37,12 @@ test.describe("New Todo", () => {
     page,
   }) => {
     // Create one todo item.
-    // invalid locator (should be .new-todox)
-    await page.locator(".new-todos").fill(TODO_ITEMS[0]);
-    await page.locator(".new-todos").press("Enter");
+    // invalid locator (should be .new-todo)
+    await page.locator(".new").fill(TODO_ITEMS[0]);
+    await page.locator(".new").press("Enter");
 
     // Check that input is empty.
-    await expect(page.locator(".new-todos")).toBeEmpty();
+    await expect(page.locator(".new")).toBeEmpty();
     await checkNumberOfTodosInLocalStorage(page, 1);
   });
 
